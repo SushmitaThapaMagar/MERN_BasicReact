@@ -3,22 +3,18 @@ import { useEffect, useState } from "react"
 
 function App() { 
   const[count, setCount] = useState(0)
-//first type
-useEffect(() =>{  //useEffect is a hook
-console.log("First UseEffect was called") 
-},[])  //[] : Dependency Array
+  const[nextCount, setnextCount] = useState(0)
 
 
-
-//second type
-useEffect (() =>{
-  console.log("Count UseEffect was called")
-}, [count])
-
+  useEffect(()=>{
+    console.log("This useEffect was called")
+  })
   return (
 <>
 <h1>{count}</h1>
 <button onClick={()=>setCount(count+1)}>+</button>
+<h1>{nextCount}</h1>
+<button onClick={()=>setnextCount(nextCount+1)}>+</button>
 </>
     
   )

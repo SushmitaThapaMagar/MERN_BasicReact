@@ -70,7 +70,11 @@ function hello(){
 
 
 
-//WHEN useEffect IS CALLED
+WHEN useEffect IS CALLED
+
+Examples
+
+//first type
 import { useEffect } from "react"
 
 
@@ -91,3 +95,65 @@ console.log("UseEffect was called")
 export default App
 
 //useEffect is used to bring external thing 
+//if you want to trigger any function then you can use useEffect
+
+
+//second type
+import { useEffect, useState } from "react"
+
+
+function App() { 
+  const[count, setCount] = useState(0)
+//first type
+useEffect(() =>{  //useEffect is a hook
+console.log("First UseEffect was called") 
+},[])  //[] : Dependency Array
+
+
+
+//second type
+useEffect (() =>{
+ document.title ="Learning UseEffect" +count
+}, [count])
+
+  return (
+<>
+<h1>{count}</h1>
+<button onClick={()=>setCount(count+1)}>+</button>
+</>
+    
+  )
+}
+
+export default App
+
+
+
+//third function
+
+
+import { useEffect, useState } from "react"
+
+
+function App() { 
+  const[count, setCount] = useState(0)
+  const[nextCount, setnextCount] = useState(0)
+
+
+  useEffect(()=>{
+    console.log("This useEffect was called")
+  })
+  return (
+<>
+<h1>{count}</h1>
+<button onClick={()=>setCount(count+1)}>+</button>
+<h1>{nextCount}</h1>
+<button onClick={()=>setnextCount(nextCount+1)}>+</button>
+</>
+    
+  )
+}
+
+export default App
+
+//throew reindeer
