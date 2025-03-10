@@ -46,3 +46,48 @@ Day 12 - MERN Stack (02/09/2025)
 
 Routing
 Hooks - Function that React developer has written ( useState, useContext, useReducer and useEffect)
+
+
+
+Day 13 - MERN Stack (02/10/2025)
+
+useEffect types : 
+a) Name Arrow function 
+const hello = () =>{
+
+}
+b) Anonymous function 
+()=> {
+
+}
+c) Regular function
+function hello(){
+
+}
+
+[] : Dependency Array
+
+
+
+
+//WHEN useEffect IS CALLED
+import { useEffect } from "react"
+
+
+function App() { 
+//first type
+useEffect(() =>{  //useEffect is a hook
+console.log("UseEffect was called") 
+},[])  //[] : Dependency Array
+
+  return (
+<>
+<h1>Learning UseEffect</h1>
+</>
+    
+  )
+}
+
+export default App
+
+//useEffect is used to bring external thing 
